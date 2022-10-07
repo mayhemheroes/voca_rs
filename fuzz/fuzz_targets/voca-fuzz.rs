@@ -51,6 +51,15 @@ fuzz_target!(|data: &[u8]| {
                     13=>{
                         in_string._max_code_point();
                     },
+                    14=>{
+                        in_string._strip_bom();
+                    },
+                    15=>{
+                        in_string._strip_tags();
+                    },
+                    16=>{
+                        in_string._graphemes();
+                    },
                     _=>()
                 }
             },
