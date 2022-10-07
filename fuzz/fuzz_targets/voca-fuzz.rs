@@ -13,10 +13,10 @@ fuzz_target!(|data: &[u8]| {
                         in_string._foreign_key();
                     },
                     1=>{
-                        in_string._max_code_point();
+                        in_string._is_alpha();
                     },
                     2=>{
-                        in_string._min_code_point();
+                        in_string._is_capitalize();
                     },
                     3=>{
                         in_string._count_graphemes();
@@ -38,6 +38,15 @@ fuzz_target!(|data: &[u8]| {
                     },
                     9=>{
                         in_string._slugify();
+                    },
+                    10=>{
+                        in_string._is_digit();
+                    },
+                    11=>{
+                        in_string._is_shouty_kebab_case();
+                    },
+                    12=>{
+                        in_string._is_title();
                     },
                     _=>()
                 }
