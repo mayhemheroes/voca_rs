@@ -48,6 +48,9 @@ fuzz_target!(|data: &[u8]| {
                     12=>{
                         in_string._is_title();
                     },
+                    13=>{
+                        in_string._max_code_point();
+                    },
                     _=>()
                 }
             },
