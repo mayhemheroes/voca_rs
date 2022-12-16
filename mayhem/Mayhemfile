@@ -1,0 +1,6 @@
+project: voca_rs
+target: voca-fuzz
+
+cmds:
+    - cmd: ./voca-fuzz
+      libfuzzer: true
